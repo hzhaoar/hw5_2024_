@@ -1,0 +1,165 @@
+/* Task 1*/
+@keyframes logoAnimation {
+	from {
+		width: 25px;
+		opacity: 0;
+	}
+
+	to {
+		width: 475px;
+		opacity: 1;
+	}
+}
+
+#logo {
+	animation: logoAnimation 5s forwards;
+
+}
+
+/* Task 2 */
+body {
+	font-family: 'Poppins', serif;
+	background-image: url('../images/concrete_seamless.png');
+	background-color: #f1f1f1;
+}
+
+/* Task 3 */
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+/* task 4 */
+.nav_links {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	color: blue;
+	text-decoration: underline blue;
+}
+
+/* task 5 */
+a:visited {
+	color: inherit;
+}
+
+/* task 8 */
+.pricing {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* task 7 */
+.card {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 450px;
+}
+
+/* task 6 */
+.card>header {
+	background: #288088;
+	border: 2px solid #45ADAD;
+	padding: 20px 0;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+}
+
+/* task 10 */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* task 9 */
+.gallery img {
+	border: 10px solid #50C7C7;
+	margin: 10px;
+	width: 300px;
+}
+
+@media screen and (min-width: 900px) {
+
+	/* task 11 */
+	header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.nav_links {
+		flex-direction: row;
+	}
+
+	/* task 12 */
+	.pricing {
+		align-items: flex-start;
+	}
+
+	.card {
+		flex-basis: 275px;
+	}
+
+	/* task 13 */
+	body>header {
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+	}
+}
+
+/* task 14 */
+@media all and (prefers-reduced-motion: reduce) {
+	#logo {
+		animation: none;
+	}
+}
+
+@media print {
+
+	/* task 15 & 16 */
+	body {
+		font-family: Arial, Helvetica;
+		background-image: none;
+	}
+
+	/* task 17 */
+	nav {
+		width: 100%;
+	}
+
+	.nav_links {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	/* task 18 */
+	.pricing {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: flex-end;
+	}
+
+	/* task 19 */
+	.card {
+		border: 2px solid #45ADDD;
+		border-top-left-radius: 50px;
+		border-top-right-radius: 50px;
+		flex-basis: 325px;
+	}
+
+	/* task 20 */
+	.gallery {
+		display: none;
+	}
+
+	/* task 21 */
+	.card>ul li:nth-child(2)::after {
+		content: "\1F44D";
+	}
+}
